@@ -33,12 +33,12 @@ If this project help you, you can give me a cup of coffee<br/>
 
 <br/><br/>
 
-## Management Web Mobile Version.<br/>
+## Smartthings Management Web Mobile Version.<br/>
 ![total](https://github.com/fison67/mi_connector/blob/master/imgs/total.png) 
 
 
 <br/><br/>
-## DTH Example<br/>
+## Smartthings DTH Example<br/>
 <a href="https://github.com/fison67/mi_connector/blob/master/imgs/dth/README.md">![total2](https://github.com/fison67/mi_connector/blob/master/imgs/dth/xiaomi-dth-exam.png) 
 
 
