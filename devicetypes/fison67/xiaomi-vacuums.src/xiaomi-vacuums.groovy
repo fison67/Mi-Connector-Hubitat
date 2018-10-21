@@ -31,12 +31,11 @@ import groovy.json.JsonSlurper
 
 metadata {
 	definition (name: "Xiaomi Vacuums", namespace: "fison67", author: "fison67") {
-        capability "Switch"						
+        capability "Switch"		
+        capability "Refresh"	
+		capability "Battery"			
          
-        attribute "switch", "string"
-        
         attribute "status", "string"
-        attribute "battery", "number"
         attribute "clean_time", "string"
         attribute "clean_area", "string"
         attribute "in_cleaning", "string"
@@ -47,11 +46,7 @@ metadata {
         
         attribute "lastCheckin", "Date"
          
-        command "on"
-        command "off"
-        command "refresh"
-        
-        command "find"
+        command "findMe"
         command "clean"
         command "charge"
         command "paused"
@@ -62,8 +57,8 @@ metadata {
         command "balanced"
         command "turbo"
         command "fullSpeed"
-        command "setVolume"
-        command "setVolumeWithTest"
+        command "setVolume", ["number"]
+        command "setVolumeWithTest", ["number"]
 	}
 
 	simulator {}
@@ -128,7 +123,7 @@ metadata {
             state "spot", label:'Spot', action:"spotClean",  backgroundColor:"#2ca6e8"
         }
         
-        standardTile("find", "device.find", width: 2, height: 2 ) {
+        standardTile("(", "device.find", width: 2, height: 2 ) {
             state "find", label:'Find Me', action:"find",  backgroundColor:"#1cffe8"
         }
         
@@ -337,7 +332,7 @@ def start(){
     sendCommand(options, null)
 }
 
-def find(){
+def findMe(){
     log.debug "find >> ${state.id}"
     def body = [
         "id": state.id,
