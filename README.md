@@ -28,18 +28,18 @@ If this project help you, you can give me a cup of coffee<br/>
 
 <br/><br/>
 ## Management Web Desktop Version.<br/>
-![web-dashboard-total](./imgs/web-dashboard-total.png) 
+![web-dashboard-total](https://github.com/fison67/mi_connector/blob/master/imgs/web-dashboard-total.png) 
 
 
 <br/><br/>
 
 ## Management Web Mobile Version.<br/>
-![total](./imgs/total.png) 
+![total](https://github.com/fison67/mi_connector/blob/master/imgs/total.png) 
 
 
 <br/><br/>
 ## DTH Example<br/>
-<a href="./imgs/dth/README.md">![total2](./imgs/dth/xiaomi-dth-exam.png) 
+<a href="https://github.com/fison67/mi_connector/blob/master/imgs/dth/README.md">![total2](https://github.com/fison67/mi_connector/blob/master/imgs/dth/xiaomi-dth-exam.png) 
 
 
 <br/><br/>
