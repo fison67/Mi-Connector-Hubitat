@@ -33,17 +33,6 @@ If this project help you, you can give me a cup of coffee<br/>
 
 <br/><br/>
 
-## Smartthings Management Web Mobile Version.<br/>
-![total](https://github.com/fison67/mi_connector/blob/master/imgs/total.png) 
-
-
-<br/><br/>
-## Smartthings DTH Example<br/>
-<a href="https://github.com/fison67/mi_connector/blob/master/imgs/dth/README.md">![total2](https://github.com/fison67/mi_connector/blob/master/imgs/dth/xiaomi-dth-exam.png) 
-
-
-<br/><br/>
-
 # Install
 #### Preparing
 ```
