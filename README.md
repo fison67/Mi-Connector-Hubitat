@@ -261,27 +261,27 @@ If you can't see anything, it's not working well..
 | Xiaomi Temp-Humid Sensor | ble.mitemperature  |  △  |  O  |
 
 
-<img src="./imgs/product/button.jpg" title="Button" width="200px"><img src="./imgs/product/button_aq.png" title="Button Aqara" width="200px"><img src="./imgs/product/cube.png" title="Cube" width="200px">
-<img src="./imgs/product/door.jpg" title="Door" width="200px"><img src="./imgs/product/door_aq.png" title="Door Aqara" width="200px"><img src="./imgs/product/fire.jpg" title="Fire Sensor" width="200px">
-<img src="./imgs/product/gateway.jpg" title="Gateway" width="200px"><img src="./imgs/product/humidifier.jpg" title="Humidifier #1" width="200px"><img src="./imgs/product/humidifier2.png" title="Humidifier #2" width="200px">
-<img src="./imgs/product/motion.jpg" title="Motion Sensor" width="200px"><img src="./imgs/product/motion_aq.png" title="Motion Aqara Sensor" width="200px"><img src="./imgs/product/smoke.jpg" title="Smoke Sensor" width="200px">
-<img src="./imgs/product/socket.png" title="Power Socket" width="200px"><img src="./imgs/product/wall_socket_1.png" title="Wall Socket #1" width="200px"><img src="./imgs/product/wall_socket_2.png" title="Wall Socket #2" width="200px">
-<img src="./imgs/product/weather.jpeg" title="Weather Sensor" width="200px"><img src="./imgs/product/weather_aq.png" title="Weather Aqara Sensor" width="200px"><img src="./imgs/product/xiaomi_fan.jpg" title="Fan" width="200px">
-<img src="./imgs/product/wireless_1.png" title="Button" width="200px"><img src="./imgs/product/wireless_2.png" title="Button" width="200px"><img src="./imgs/product/yeelight_color.jpg" title="Yeelight Color" width="200px">
-<img src="./imgs/product/yeelight_mono.jpg" title="Yeelight Mono" width="200px"><img src="./imgs/product/air_purifier.jpg" title="Air Purifier" width="200px">
-<img src="./imgs/product/air-monitor.jpg?raw=true" title="Air Monitor" width="200px">
-<img src="./imgs/product/water.jpg?raw=true" title="Water Sensor" width="200px">
-<img src="./imgs/product/curtain.png?raw=true" title="Curtain" width="200px">
-<img src="./imgs/product/yeelight-color-e27.jpg?raw=true" title="Yeelight Color E27" width="200px">
-<img src="./imgs/product/yeelight-mono-e27.png?raw=true" title="Yeelight Mono E27" width="200px">
-<img src="./imgs/product/ceiling.jpg?raw=true" title="Ceiling" width="200px">
-<img src="./imgs/product/power-strip.png?raw=true" title="Power Strip" width="200px">
-<img src="./imgs/product/philips-ceiling.jpg?raw=true" title="Philips Ceiling Light" width="200px">
-<img src="./imgs/product/ir-remote.jpg?raw=true" title="IR Remote" width="200px">
-<img src="./imgs/product/mi-flora.png?raw=true" title="Flora" width="200px">
-<img src="./imgs/product/flora-pot.jpg?raw=true" title="Flora Pot" width="200px">
-<img src="./imgs/product/vibration.jpeg?raw=true" title="Vibration" width="200px">
-<img src="./imgs/product/ble-temp-humid.jpg?raw=true" title="Bluetooth Temperature Humidity Sensor" width="200px">
+<img src="https://github.com/fison67/mi_connector/blob/master/imgs/product/button.jpg" title="Button" width="200px"><img src="https://github.com/fison67/mi_connector/blob/master/imgs/product/button_aq.png" title="Button Aqara" width="200px"><img src="https://github.com/fison67/mi_connector/blob/master/imgs/product/cube.png" title="Cube" width="200px">
+<img src="https://github.com/fison67/mi_connector/blob/master/imgs/product/door.jpg" title="Door" width="200px"><img src="https://github.com/fison67/mi_connector/blob/master/imgs/product/door_aq.png" title="Door Aqara" width="200px"><img src="https://github.com/fison67/mi_connector/blob/master/imgs/product/fire.jpg" title="Fire Sensor" width="200px">
+<img src="https://github.com/fison67/mi_connector/blob/master/imgs/product/gateway.jpg" title="Gateway" width="200px"><img src="https://github.com/fison67/mi_connector/blob/master/imgs/product/humidifier.jpg" title="Humidifier #1" width="200px"><img src="https://github.com/fison67/mi_connector/blob/master/imgs/product/humidifier2.png" title="Humidifier #2" width="200px">
+<img src="https://github.com/fison67/mi_connector/blob/master/imgs/product/motion.jpg" title="Motion Sensor" width="200px"><img src="https://github.com/fison67/mi_connector/blob/master/imgs/product/motion_aq.png" title="Motion Aqara Sensor" width="200px"><img src="https://github.com/fison67/mi_connector/blob/master/imgs/product/smoke.jpg" title="Smoke Sensor" width="200px">
+<img src="https://github.com/fison67/mi_connector/blob/masterhttps://github.com/fison67/mi_connector/blob/master/imgs/product/socket.png" title="Power Socket" width="200px"><img src="https://github.com/fison67/mi_connector/blob/master/imgs/product/wall_socket_1.png" title="Wall Socket #1" width="200px"><img src="https://github.com/fison67/mi_connector/blob/master/imgs/product/wall_socket_2.png" title="Wall Socket #2" width="200px">
+<img src="https://github.com/fison67/mi_connector/blob/master/imgs/product/weather.jpeg" title="Weather Sensor" width="200px"><img src="https://github.com/fison67/mi_connector/blob/master/imgs/product/weather_aq.png" title="Weather Aqara Sensor" width="200px"><img src="https://github.com/fison67/mi_connector/blob/master/imgs/product/xiaomi_fan.jpg" title="Fan" width="200px">
+<img src="https://github.com/fison67/mi_connector/blob/master/imgs/product/wireless_1.png" title="Button" width="200px"><img src="https://github.com/fison67/mi_connector/blob/master/imgs/product/wireless_2.png" title="Button" width="200px"><img src="https://github.com/fison67/mi_connector/blob/master/imgs/product/yeelight_color.jpg" title="Yeelight Color" width="200px">
+<img src="https://github.com/fison67/mi_connector/blob/master/imgs/product/yeelight_mono.jpg" title="Yeelight Mono" width="200px"><img src="https://github.com/fison67/mi_connector/blob/master/imgs/product/air_purifier.jpg" title="Air Purifier" width="200px">
+<img src="https://github.com/fison67/mi_connector/blob/master/imgs/product/air-monitor.jpg?raw=true" title="Air Monitor" width="200px">
+<img src="https://github.com/fison67/mi_connector/blob/master/imgs/product/water.jpg?raw=true" title="Water Sensor" width="200px">
+<img src="https://github.com/fison67/mi_connector/blob/master/imgs/product/curtain.png?raw=true" title="Curtain" width="200px">
+<img src="https://github.com/fison67/mi_connector/blob/master/imgs/product/yeelight-color-e27.jpg?raw=true" title="Yeelight Color E27" width="200px">
+<img src="https://github.com/fison67/mi_connector/blob/master/imgs/product/yeelight-mono-e27.png?raw=true" title="Yeelight Mono E27" width="200px">
+<img src="https://github.com/fison67/mi_connector/blob/master/imgs/product/ceiling.jpg?raw=true" title="Ceiling" width="200px">
+<img src="https://github.com/fison67/mi_connector/blob/master/imgs/product/power-strip.png?raw=true" title="Power Strip" width="200px">
+<img src="https://github.com/fison67/mi_connector/blob/master/imgs/product/philips-ceiling.jpg?raw=true" title="Philips Ceiling Light" width="200px">
+<img src="https://github.com/fison67/mi_connector/blob/master/imgs/product/ir-remote.jpg?raw=true" title="IR Remote" width="200px">
+<img src="https://github.com/fison67/mi_connector/blob/master/imgs/product/mi-flora.png?raw=true" title="Flora" width="200px">
+<img src="https://github.com/fison67/mi_connector/blob/master/imgs/product/flora-pot.jpg?raw=true" title="Flora Pot" width="200px">
+<img src="https://github.com/fison67/mi_connector/blob/master/imgs/product/vibration.jpeg?raw=true" title="Vibration" width="200px">
+<img src="https://github.com/fison67/mi_connector/blob/master/imgs/product/ble-temp-humid.jpg?raw=true" title="Bluetooth Temperature Humidity Sensor" width="200px">
 
 <br/><br/>
 ## Library
