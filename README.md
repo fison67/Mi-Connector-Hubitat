@@ -11,8 +11,18 @@ If this project help you, you can give me a cup of coffee<br/>
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypal.me/fison67)
 <br/><br/>
 
-#### Example Video<br/>
-[![Example](https://img.youtube.com/vi/CtPce-KBVcY/0.jpg)](https://www.youtube.com/watch?v=CtPce-KBVcY)
+#### Example<br/>
+![dashboard](./imgs/dashboard.png) 
+#### Gateway
+![gateway](./imgs/gateway.png)<br/>
+#### Curtain
+![curtain](./imgs/curtain.png) <br/>
+#### Light
+![light](./imgs/light.png) <br/>
+#### Vacuum
+![vacuum](./imgs/vacuum.png)<br/>
+#### Weather
+![weather](./imgs/weather.png) <br/>
 
 <br/><br/>
 ### Latest Version
