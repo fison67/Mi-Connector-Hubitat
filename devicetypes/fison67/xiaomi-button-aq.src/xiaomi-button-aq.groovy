@@ -32,51 +32,43 @@ import groovy.json.JsonSlurper
 metadata {
 	definition (name: "Xiaomi Button AQ", namespace: "fison67", author: "fison67") {
         capability "Sensor"						//"on", "off"
-        capability "Configuration"
+        capability "PushableButton"
+        capability "DoubleTapableButton"
+	capability "HoldableButton"
+	capability "ReleasableButton"
         capability "Battery"
-		capability "Refresh"
+	capability "Refresh"
                
-        attribute "status", "string"
-        
         attribute "lastCheckin", "Date"
         
         command "click"
         command "double_click"
+        command "long_click"
+        command "long_click_release"
+		
 	}
-
 
 	simulator {
 	}
-
-	tiles(scale: 2) {
-		multiAttributeTile(name:"button", type: "generic", width: 6, height: 4){
-			tileAttribute ("device.button", key: "PRIMARY_CONTROL") {
-                attributeState "click", label:'\nButton', icon:"http://postfiles10.naver.net/MjAxODA0MDJfMTYy/MDAxNTIyNjcwOTc1NTE4.h-TVphSLTwUCzXdPnKElZ45Yr4lJLWkL7MF4pt21f5Ig.CmdFO36k5AW8xK08ahvYlWhN3_rk48SJkmknMYVcFycg.PNG.shin4299/buttonAQ_main.png?type=w3", backgroundColor:"#8CB8C9"
-			}
-            tileAttribute("device.battery", key: "SECONDARY_CONTROL") {
-    			attributeState("default", label:'Battery: ${currentValue}%\n')
-            }		
-            tileAttribute("device.lastCheckin", key: "SECONDARY_CONTROL") {
-    			attributeState("default", label:'\nLast Update: ${currentValue}')
-            }
-		}
-        valueTile("click", "device.button", decoration: "flat", width: 2, height: 2) {
-            state "default", label:'Button#1_Core \n one_click', action:"click"
-        }
-        valueTile("double_click", "device.button", decoration: "flat", width: 2, height: 2) {
-            state "default", label:"Button#2_Core \n double_click", action:"double_click"
-        }        
-        standardTile("refresh", "device.refresh", inactiveLabel: false, decoration: "flat", width: 2, height: 2) {
-            state "default", label:"", action:"refresh", icon:"st.secondary.refresh"
-        }
-        
-        main (["button"])
-        details(["button", "click", "double_click", "refresh"])        
-	}
 }
 
-def click() {buttonEvent(1, "pushed")}
-def double_click() {buttonEvent(2, "pushed")}
+def click() {
+    push(1)
+}
+
+def double_click() {
+	doubleTap(1)
+}
+
+def long_click(){
+	hold(1)
+}
+
+def long_click_release(){
+	release(1)
+}
+
+
 
 // parse events into attributes
 def parse(String description) {
@@ -87,6 +79,8 @@ def setInfo(String app_url, String id) {
 	log.debug "${app_url}, ${id}"
 	state.app_url = app_url
     state.id = id
+    
+    sendEvent(name:"numberOfButtons", value: 1)
 }
 
 def setStatus(params){
@@ -94,12 +88,13 @@ def setStatus(params){
  	switch(params.key){
     case "action":
     	if(params.data == "click") {
-        	buttonEvent(1, "pushed")
-        }
-        else if(params.data == "double_click") {
-        	buttonEvent(2, "pushed")
-        }
-        else {
+            push(1)
+        } else if(params.data == "double_click") {
+            doubleTap(1)
+        } else if(params.data == "long_click_press") {
+        	hold(2)
+        } else if(params.data == "long_release_press") {
+        	release(1)
         }
     	break;
     case "batteryLevel":
@@ -108,11 +103,6 @@ def setStatus(params){
     }
     
     updateLastTime()
-    
-}
-
-def buttonEvent(Integer button, String action) {
-    sendEvent(name: "button", value: action, data: [buttonNumber: button], descriptionText: "$device.displayName button $button was $action", isStateChange: true)
 }
 
 def refresh(){
@@ -141,12 +131,11 @@ def callback(hubitat.device.HubResponse hubResponse){
     }
 }
 
-def updated() {
-}
+def updated() {}
 
 def updateLastTime(){
 	def now = new Date().format("yyyy-MM-dd HH:mm:ss", location.timeZone)
-    sendEvent(name: "lastCheckin", value: now)
+    sendEvent(name: "lastCheckin", value: now, )
 }
 
 def sendCommand(options, _callback){
