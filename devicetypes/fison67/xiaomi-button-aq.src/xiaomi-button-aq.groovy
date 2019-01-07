@@ -1,5 +1,5 @@
 /**
- *  Xiaomi Switch (v.0.0.1)
+ *  Xiaomi Switch (v.0.0.2)
  *
  * MIT License
  *
@@ -34,10 +34,10 @@ metadata {
         capability "Sensor"						//"on", "off"
         capability "PushableButton"
         capability "DoubleTapableButton"
-	capability "HoldableButton"
-	capability "ReleasableButton"
+		capability "HoldableButton"
+		capability "ReleasableButton"
         capability "Battery"
-	capability "Refresh"
+		capability "Refresh"
                
         attribute "lastCheckin", "Date"
         
@@ -48,24 +48,22 @@ metadata {
 		
 	}
 
-	simulator {
-	}
 }
 
 def click() {
-    push(1)
+	sendEvent(name:"pushed", value:1, isStateChange: true, descriptionText: "Click")
 }
 
 def double_click() {
-	doubleTap(1)
+	sendEvent(name:"doubleTapped", value:1, isStateChange: true, descriptionText: "Double Click")
 }
 
 def long_click(){
-	hold(1)
+	sendEvent(name:"held", value:1, isStateChange: true, descriptionText: "Long Click")
 }
 
 def long_click_release(){
-	release(1)
+	sendEvent(name:"released", value:1, isStateChange: true, descriptionText: "Release")
 }
 
 
@@ -88,13 +86,13 @@ def setStatus(params){
  	switch(params.key){
     case "action":
     	if(params.data == "click") {
-            push(1)
+            click()
         } else if(params.data == "double_click") {
-            doubleTap(1)
+            double_click()
         } else if(params.data == "long_click_press") {
-        	hold(2)
+        	long_click()
         } else if(params.data == "long_release_press") {
-        	release(1)
+        	long_click_release()
         }
     	break;
     case "batteryLevel":
