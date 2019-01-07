@@ -1,5 +1,5 @@
 /**
- *  Xiaomi Switch (v.0.0.1)
+ *  Xiaomi Switch (v.0.0.2)
  *
  * MIT License
  *
@@ -33,6 +33,10 @@ metadata {
 	definition (name: "Xiaomi Button Ori", namespace: "fison67", author: "fison67") {
         capability "Sensor"						//"on", "off"
         capability "Configuration"
+        capability "PushableButton"
+        capability "DoubleTapableButton"
+		capability "HoldableButton"
+		capability "ReleasableButton"
         capability "Battery"
 		capability "Refresh"
         
@@ -43,46 +47,24 @@ metadata {
         command "long_click_press"
         command "long_click_release"
 	}
-
-
-	simulator {
-	}
-
-	tiles(scale: 2) {
-		multiAttributeTile(name:"button", type: "generic", width: 6, height: 4){
-			tileAttribute ("device.button", key: "PRIMARY_CONTROL") {
-                attributeState "click", label:'\nButton', icon:"http://postfiles1.naver.net/MjAxODA0MDJfMjQ3/MDAxNTIyNjcwOTc1OTA0.g_GeJwDzpJhau4j0OOi2LzKoT8Qtnlq4sHnGVBnQYHwg.DpHVKVGEZfmefd-tfuz4VnAg5vknwkfA7XDo-_Cow88g.PNG.shin4299/buttonOr_main.png?type=w3", backgroundColor:"#8CB8C9"                
-			}
-            tileAttribute("device.battery", key: "SECONDARY_CONTROL") {
-    			attributeState("default", label:'Battery: ${currentValue}%\n')
-            }		
-            tileAttribute("device.lastCheckin", key: "SECONDARY_CONTROL") {
-    			attributeState("default", label:'\nLast Update: ${currentValue}')
-            }
-		}
-        valueTile("click", "device.button", decoration: "flat", width: 2, height: 2) {
-            state "default", label:'Button#1_Core \n one_click', action:"click"
-        }
-        valueTile("double_click", "device.button", decoration: "flat", width: 2, height: 2) {
-            state "default", label:"Button#2_Core \n double_click", action:"double_click"
-        }
-        valueTile("long_click_press", "device.button", decoration: "flat", width: 2, height: 2) {
-            state "default", label:"Button#3_Core \n long_click_press", action:"long_click_press"
-        }   
-        valueTile("long_click_release", "device.button", decoration: "flat", width: 2, height: 2) {
-            state "default", label:"Button#4_Core \n long_click_release", action:"long_click_release"
-        }    
-        standardTile("refresh", "device.refresh", inactiveLabel: false, decoration: "flat", width: 2, height: 2) {
-            state "default", label:"", action:"refresh", icon:"st.secondary.refresh"
-        }
-	}
 }
 
 
-def click() {buttonEvent(1, "pushed")}
-def double_click() {buttonEvent(2, "pushed")}
-def long_click_press() {buttonEvent(3, "pushed")}
-def long_click_release() {buttonEvent(4, "pushed")}
+def click() {
+	sendEvent(name:"pushed", value:1, isStateChange: true, descriptionText: "Click")
+}
+
+def double_click() {
+	sendEvent(name:"doubleTapped", value:1, isStateChange: true, descriptionText: "Double Click")
+}
+
+def long_click(){
+	sendEvent(name:"held", value:1, isStateChange: true, descriptionText: "Long Click")
+}
+
+def long_click_release(){
+	sendEvent(name:"released", value:1, isStateChange: true, descriptionText: "Release")
+}
 
 // parse events into attributes
 def parse(String description) {
@@ -100,15 +82,13 @@ def setStatus(params){
  	switch(params.key){
     case "action":
     	if(params.data == "click") {
-        	buttonEvent(1, "pushed")
+            click()
         } else if(params.data == "double_click") {
-        	buttonEvent(2, "pushed")
+            double_click()
         } else if(params.data == "long_click_press") {
-        	buttonEvent(3, "pushed")
-        }
-        else if(params.data == "long_click_release") {
-        	buttonEvent(4, "pushed")
-        } else { 
+        	long_click()
+        } else if(params.data == "long_release_press") {
+        	long_click_release()
         }
     	break;
     case "batteryLevel":
