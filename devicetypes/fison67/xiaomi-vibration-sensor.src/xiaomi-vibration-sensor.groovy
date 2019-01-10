@@ -1,5 +1,5 @@
 /**
- *  Xiaomi Vibration Sensor (v.0.0.1)
+ *  Xiaomi Vibration Sensor (v.0.0.2)
  *
  * MIT License
  *
@@ -31,6 +31,7 @@ import groovy.json.JsonSlurper
 
 metadata {
 	definition (name: "Xiaomi Vibration Sensor", namespace: "fison67", author: "fison67") {
+		capability "PushableButton"
         capability "Sensor"			
         capability "Configuration"
         capability "Refresh"
@@ -85,17 +86,17 @@ def setStatus(params){
  	switch(params.key){
     case "action":
     	if(params.data == "vibrate") {
-        	buttonEvent(1, "pushed")
+			sendEvent(name:"pushed", value:1, isStateChange: true, descriptionText: "vibrate")
         } else if(params.data == "tilt") {
-       	 	buttonEvent(2, "pushed")
+			sendEvent(name:"pushed", value:2, isStateChange: true, descriptionText: "tilt")
         } else if(params.data == "final_tilt_angle"){
-       	 	buttonEvent(3, "pushed")
+			sendEvent(name:"pushed", value:3, isStateChange: true, descriptionText: "final_tilt_angle")
             sendEvent(name: "final_tilt_angle", value: params.subData as int)
         } else if(params.data == "coordination"){
-       	 	buttonEvent(4, "pushed")
+			sendEvent(name:"pushed", value:4, isStateChange: true, descriptionText: "coordination")
             sendEvent(name: "coordination", value: params.subData)
         } else if(params.data == "bed_activity"){
-       	 	buttonEvent(5, "pushed")
+			sendEvent(name:"pushed", value:5, isStateChange: true, descriptionText: "bed_activity")
             sendEvent(name: "bed_activity", value: params.subData as int)
         }
     	break;
@@ -105,10 +106,6 @@ def setStatus(params){
     }
     
     updateLastTime()
-}
-
-def buttonEvent(Integer button, String action) {
-    sendEvent(name: "button", value: action, data: [buttonNumber: button], descriptionText: "$device.displayName button $button was $action", isStateChange: true)
 }
 
 def updateLastTime(){
