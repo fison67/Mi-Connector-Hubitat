@@ -1,5 +1,5 @@
 /**
- *  Mi Connector (v.0.0.1)
+ *  Mi Connector (v.0.0.2)
  *
  * MIT License
  *
@@ -609,7 +609,7 @@ def renderConfig() {
             [
                 platform: "Hubitat Mi Connector",
                 name: "Mi Connector",
-                app_url: apiServerUrl("/api/smartapps/installations/"),
+                app_url: localApiServerUrl(""),
                 app_id: app.id,
                 access_token:  state.accessToken
             ]
