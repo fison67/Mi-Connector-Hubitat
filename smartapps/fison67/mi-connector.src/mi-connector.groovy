@@ -1,5 +1,5 @@
 /**
- *  Mi Connector (v.0.0.2)
+ *  Mi Connector (v.0.0.3)
  *
  * MIT License
  *
@@ -342,7 +342,7 @@ def addDevice(){
         def dth = null
         def name = null
 
-        if(params.type == "zhimi.airpurifier.m1" || params.type == "zhimi.airpurifier.v1" || params.type == "zhimi.airpurifier.v2" || params.type ==  "zhimi.airpurifier.v3" || params.type ==  "zhimi.airpurifier.v6" || params.type ==  "zhimi.airpurifier.m2" || params.type ==  "zhimi.airpurifier.ma2" || params.type ==  "zhimi.airpurifier.mc1"){
+        if(params.type == "zhimi.airpurifier.m1" || params.type == "zhimi.airpurifier.v1" || params.type == "zhimi.airpurifier.v2" || params.type ==  "zhimi.airpurifier.v3" || params.type ==  "zhimi.airpurifier.v6" || params.type ==  "zhimi.airpurifier.v7" || params.type ==  "zhimi.airpurifier.m2" || params.type ==  "zhimi.airpurifier.ma2" || params.type ==  "zhimi.airpurifier.mc1"){
         	dth = "Xiaomi Air Purifier";
             name = "Xiaomi Air Purifier";
         }else if(params.type == "lumi.gateway.v2"){
@@ -387,18 +387,27 @@ def addDevice(){
         }else if(params.type == "yeelink.light.lamp1" || params.type == "yeelink.light.mono1" || params.type == "yeelink.light.ct2"){
         	dth = "Xiaomi Light Mono";
             name = "Xiaomi Light Mono";
+        }else if(params.type == "philips.light.downlight"){
+        	dth = "Xiaomi Philips Downlight";
+            name = "Xiaomi Philips Downlight";
         }else if(params.type == "philips.light.sread1" || params.type == "philips.light.bulb"){
         	dth = "Xiaomi Light";
             name = "Philips Light";
-        }else if(params.type == "rockrobo.vacuum.v1" || params.type == "roborock.vacuum.s5" || params.type == "roborock.vacuum.c1"){
+        }else if(params.type == "rockrobo.vacuum.v1" || params.type == "roborock.vacuum.c1"){
         	dth = "Xiaomi Vacuums";
             name = "Xiaomi Vacuums";
+        }else if(params.type == "roborock.vacuum.s5"){
+        	dth = "Xiaomi Vacuums2";
+            name = "Xiaomi Vacuums2";
         }else if(params.type == "qmi.powerstrip.v1" || params.type == "zimi.powerstrip.v2"){
         	dth = "Xiaomi Power Strip";
             name = "Xiaomi Power Strip";
         }else if(params.type == "chuangmi.plug.v1" || params.type == "chuangmi.plug.v2" || params.type == "chuangmi.plug.m1" || params.type == "lumi.plug"){
         	dth = "Xiaomi Power Plug";
             name = "Xiaomi Power Plug";
+        }else if(params.type == "chuangmi.plug.v3"){
+        	dth = "Xiaomi Power Plug2";
+            name = "Xiaomi Power Plug2";
         }else if(params.type == "lumi.ctrl_neutral1" || params.type == "lumi.ctrl_ln1" ){
         	dth = "Xiaomi Wall Switch";
             name = "Xiaomi Wall Switch";
@@ -411,6 +420,9 @@ def addDevice(){
         }else if(params.type == "zhimi.airmonitor.v1"){
         	dth = "Xiaomi Air Monitor";
             name = "Xiaomi Air Monitor";
+        }else if(params.type == "cgllc.airmonitor.b1"){
+        	dth = "Xiaomi Air Detector";
+            name = "Xiaomi Air Detector";
         }else if(params.type == "lumi.weather"){
         	dth = "Xiaomi Weather";
             name = "Xiaomi Weather";
@@ -420,10 +432,10 @@ def addDevice(){
 		}else if(params.type == "lumi.smoke"){
         	dth = "Xiaomi Smoke Dectector";
             name = "Xiaomi Smoke Dectector";
-        }else if(params.type == "yeelink.light.ceiling1" || params.type == "yeelink.light.ceiling2"){
+        }else if(params.type == "yeelink.light.ceiling1" || params.type == "yeelink.light.ceiling2" || params.type == "yeelink.light.ceiling6"){
         	dth = "Xiaomi Light Ceiling";
             name = "Xiaomi Light Ceiling";
-        }else if(params.type == "philips.light.ceiling"){
+        }else if(params.type == "philips.light.ceiling" || params.type == "philips.light.zyceiling"){
         	dth = "Xiaomi Philips Light Ceiling";
             name = "Xiaomi Philips Light Ceiling";
         }else if(params.type == "lumi.curtain"){
@@ -465,7 +477,12 @@ def addDevice(){
         }else if(params.type == "lumi.vibration"){
         	dth = "Xiaomi Vibration Sensor"
             name = "Xiaomi Vibration Sensor"
+        }else if(params.type == "zhimi.heater.za1"){
+        	dth = "Xiaomi Heater"
+            name = "Xiaomi Heater"
         }
+
+        
         
         
         if(dth == null){
