@@ -46,7 +46,6 @@ metadata {
 		attribute "currentDay", "String"
 
         attribute "lastCheckin", "Date"
-		attribute "lastCheckinDate", "String"
 
         command "chartTemperature"
         command "chartHumidity"
@@ -201,15 +200,12 @@ def setStatus(params){
     	break;		
     }
     
-//    def now = new Date().format("yyyy-MM-dd HH:mm:ss", location.timeZone)
-//    sendEvent(name: "lastCheckin", value: now)
-    def now = formatDate()    
-    def nowDate = new Date(now).getTime()
+    def now = new Date().format("yyyy-MM-dd HH:mm:ss", location.timeZone)
+   
 
 	// Any report - temp, humidity, pressure, & battery - results in a lastCheckin event and update to Last Checkin tile
 	// However, only a non-parseable report results in lastCheckin being displayed in events log
     sendEvent(name: "lastCheckin", value: now, displayed: false)
-    sendEvent(name: "lastCheckinDate", value: nowDate, displayed: false)
 
 	// Check if the min/max temp and min/max humidity should be reset
     checkNewDay(now)
