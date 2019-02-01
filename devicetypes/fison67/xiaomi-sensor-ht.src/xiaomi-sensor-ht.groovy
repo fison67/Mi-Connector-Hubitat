@@ -200,12 +200,10 @@ def setStatus(params){
     	break;		
     }
     
-    def now = new Date().format("yyyy-MM-dd HH:mm:ss", location.timeZone)
-   
-
+    def now = new Date()
 	// Any report - temp, humidity, pressure, & battery - results in a lastCheckin event and update to Last Checkin tile
 	// However, only a non-parseable report results in lastCheckin being displayed in events log
-    sendEvent(name: "lastCheckin", value: now, displayed: false)
+    sendEvent(name: "lastCheckin", value: now.format("yyyy-MM-dd HH:mm:ss", location.timeZone), displayed: false)
 
 	// Check if the min/max temp and min/max humidity should be reset
     checkNewDay(now)
